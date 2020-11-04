@@ -1,5 +1,7 @@
 package servlets;
 
+import model.Book;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +17,13 @@ public class BooksServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        getServletContext().getRequestDispatcher("/books.jsp").forward(request, response);
+        String title = request.getParameter("title");
+        String author = request.getParameter("author");
 
+        if(title != null && author != null){
+            request.setAttribute("book", new Book(title, author));
+        }
+
+        getServletContext().getRequestDispatcher("/books.jsp").forward(request, response);
     }
 }

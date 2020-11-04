@@ -56,6 +56,10 @@
         <td class="title">To Kill a Mockingbird</td>
         <td class="author">Harper Lee</td>
     </tr>
+    <tr>
+        <td class="title">${book.title}</td>
+        <td class="author">${book.author}</td>
+    </tr>
 </table>
 
 
