@@ -63,13 +63,18 @@
 </table>
 
 
-    <div>
-        <img src="img/animal-farm.jpg" alt="">
-    </div>
-    <div>
-        <img src="img/to-kill-a-mockingbird.jpg" alt="">
-    </div>
+<div>
+    <img src="img/animal-farm.jpg" alt="">
+</div>
+<div>
+    <img src="img/to-kill-a-mockingbird.jpg" alt="">
+</div>
 
+<form method="post" action="/books">
+    <label for="title">Title:<input type="text" id="title" name="title"></label>
+    <label for="author">Author:<input type="text" id="author" name="author"></label>
+    <button type="submit" class="btn">Submit</button>
+</form>
 
 </body>
 </html>
