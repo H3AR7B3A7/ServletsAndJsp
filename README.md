@@ -5,7 +5,7 @@
 ## Deployment
 ### TomCat or GlassFish
 
-Tomcat is simply an HTTP server and a Java servlet container. Glassfish is a complete Java EE application server, including an EJB container and all the other features of this stack. ... By comparison, Tomcat server administration is easier than Glassfish administration, since there are fewer moving parts in Tomcat.
+[Tomcat](http://tomcat.apache.org/) is simply an HTTP server and a Java servlet container. [Glassfish](https://javaee.github.io/glassfish/download) is a complete Java EE application server, including an EJB container and all the other features of this stack. ... By comparison, Tomcat server administration is easier than Glassfish administration, since there are fewer moving parts in Tomcat.
 
 ### Default URL
 http://localhost:8080/ServletsAndJsp_war_exploded/  
