@@ -1,13 +1,14 @@
 package servlets;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "HelloServlet", urlPatterns = {"/hello", "/hi", "/ola/*"})
+@WebServlet(name = "HelloServlet", urlPatterns = {"/hello", "/hi", "/ola/*"}, initParams = {@WebInitParam(name = "availableInServlet", value = "I'm available!")})
 public class HelloServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -23,13 +24,14 @@ public class HelloServlet extends HttpServlet {
         String last = request.getParameter("last");
 
         String contextParam = getServletContext().getInitParameter("availableEverywhere");
+        String initParam = getServletConfig().getInitParameter("availableInServlet");
 
         response.setContentType("text/html");
 
         if(first == null || last == null) {
             response.getWriter().println("<h1>Hello beautiful world!</h1>");
         }else{
-            response.getWriter().println("<h1>Hello " + first + " " + last + "</h1><br>" + contextParam);
+            response.getWriter().println("<h1>Hello " + first + " " + last + "</h1><br>" + contextParam + "<br>" + initParam);
         }
 
     }
