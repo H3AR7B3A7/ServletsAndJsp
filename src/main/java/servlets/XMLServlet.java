@@ -13,6 +13,10 @@ public class XMLServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String initParam = getServletConfig().getInitParameter("availableInServlet");
+
+        response.getWriter().println("<h1>" + initParam + "</h1>");
+
         System.out.println("GET request was made to /xml");
 
     }

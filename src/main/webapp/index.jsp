@@ -30,5 +30,6 @@
 <p><a href="books">Books</a></p>
 <p><a href="redirect">Redirect</a></p>
 <p><a href="hello?first=Steven&last=D%27Hondt">Personal greeting</a></p>
+<p><a href="xml">Xml Servlet</a></p>
 </body>
 </html>

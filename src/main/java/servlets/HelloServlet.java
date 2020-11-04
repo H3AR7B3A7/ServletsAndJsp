@@ -22,14 +22,14 @@ public class HelloServlet extends HttpServlet {
         String first = request.getParameter("first");
         String last = request.getParameter("last");
 
-        String contextVariable = getServletContext().getInitParameter("availableEverywhere");
+        String contextParam = getServletContext().getInitParameter("availableEverywhere");
 
         response.setContentType("text/html");
 
         if(first == null || last == null) {
             response.getWriter().println("<h1>Hello beautiful world!</h1>");
         }else{
-            response.getWriter().println("<h1>Hello " + first + " " + last + "</h1><br>" + contextVariable);
+            response.getWriter().println("<h1>Hello " + first + " " + last + "</h1><br>" + contextParam);
         }
 
     }

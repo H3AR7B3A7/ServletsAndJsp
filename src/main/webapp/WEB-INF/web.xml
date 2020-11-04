@@ -6,6 +6,10 @@
     <servlet>
         <servlet-name>XMLServlet</servlet-name>
         <servlet-class>servlets.XMLServlet</servlet-class>
+        <init-param>
+            <param-name>availableInServlet</param-name>
+            <param-value>Huh?</param-value>
+        </init-param>
     </servlet>
 
     <servlet-mapping>
