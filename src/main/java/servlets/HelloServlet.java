@@ -19,9 +19,16 @@ public class HelloServlet extends HttpServlet {
 
         System.out.println("GET request was made to /hello");
 
+        String first = request.getParameter("first");
+        String last = request.getParameter("last");
+
         response.setContentType("text/html");
 
-        response.getWriter().println("<h1>Hello beautiful world!</h1>");
+        if(first == null || last == null) {
+            response.getWriter().println("<h1>Hello beautiful world!</h1>");
+        }else{
+            response.getWriter().println("<h1>Hello " + first + " " + last + "</h1>");
+        }
 
     }
 }

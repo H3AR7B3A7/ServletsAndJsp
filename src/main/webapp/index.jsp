@@ -29,5 +29,6 @@
 <h1>Hello world!</h1>
 <p><a href="books.jsp">Books</a></p>
 <p><a href="redirect">Redirect</a></p>
+<p><a href="hello?first=Steven&last=D%27Hondt">Personal greeting</a></p>
 </body>
 </html>
