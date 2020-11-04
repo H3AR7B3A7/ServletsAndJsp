@@ -9,9 +9,25 @@
 <html>
 <head>
     <title>My First Jsp</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 150%;
+            background-color: mediumpurple;
+            color: white;
+        }
+        a, a:link, a:visited, a:hover, a:active {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            color: purple;
+        }
+    </style>
 </head>
 <body>
 <h1>Hello world!</h1>
-<p>Even more pretty ...</p>
+<p><a href="books.jsp">Books</a></p>
+<p><a href="redirect">Redirect</a></p>
 </body>
 </html>
