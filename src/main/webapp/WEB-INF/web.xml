@@ -21,4 +21,8 @@
         <param-name>availableEverywhere</param-name>
         <param-value>You fetched me?</param-value>
     </context-param>
+
+    <error-page>
+        <location>/404.jsp</location>
+    </error-page>
 </web-app>
