@@ -8,7 +8,7 @@
 Tomcat is simply an HTTP server and a Java servlet container. Glassfish is a complete Java EE application server, including an EJB container and all the other features of this stack. ... By comparison, Tomcat server administration is easier than Glassfish administration, since there are fewer moving parts in Tomcat.
 
 ### Default URL
-http://localhost:8080/ServletsAndJsp_war_exploded/
+http://localhost:8080/ServletsAndJsp_war_exploded/  
 Where "ServletsAndJsp" is the project name.  
 This can be changed in the 'Run/Debug configurations'.
 
