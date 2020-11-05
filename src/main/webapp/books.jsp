@@ -56,10 +56,13 @@
         <td class="title">To Kill a Mockingbird</td>
         <td class="author">Harper Lee</td>
     </tr>
+<%--  THIS WILL INSERT ONE ENTRY WITH A POST OR GET REQUEST  --%>
     <tr>
         <td class="title">${book.title}</td>
         <td class="author">${book.author}</td>
     </tr>
+<%--  THIS WILL FILL UP TABLE WITH DB ENTRIES  --%>
+    ${DATA}
 </table>
 
 
