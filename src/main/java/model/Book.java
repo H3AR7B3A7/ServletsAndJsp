@@ -1,12 +1,10 @@
 package model;
 
-import dev.morphia.annotations.Id;
-
 import java.io.Serializable;
 
 public class Book implements Serializable {
 
-    @Id
+
     private String title;
     private String author;
 
