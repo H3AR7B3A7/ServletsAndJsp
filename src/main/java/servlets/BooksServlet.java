@@ -48,7 +48,7 @@ public class BooksServlet extends HttpServlet {
             System.out.println(sb.length() + " of 2147483647 max characters");
         }
 
-        System.out.println((2147483647-(64 + (collection.countDocuments()-1) * 66))/66 + " more entries can be added to this string builder.");
+        System.out.println((2147483647-sb.length())/66 + " more entries can be added to this string builder.");
         request.setAttribute("DATA", sb);
 
 //        handleRequest(request, response);
