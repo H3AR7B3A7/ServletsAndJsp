@@ -36,8 +36,10 @@ public class BooksServlet extends HttpServlet {
             System.out.println(doc.get("title"));
             System.out.println(doc.get("author"));
             sb.append("<tr><td class='title'>").append(doc.get("title").toString()).append("</td><td class='author'>").append(doc.get("author").toString()).append("</td></tr>");
+            System.out.println(sb.length() + " of 2147483647 max characters");
         }
 
+        System.out.println((2147483647-(64 + (collection.countDocuments()-1) * 66))/66 + " more entries can be added to this string builder.");
         request.setAttribute("DATA", sb);
 
         handleRequest(request, response);
