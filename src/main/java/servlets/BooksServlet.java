@@ -19,8 +19,17 @@ public class BooksServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        handleRequest(request, response);
+        MongoClient mongoClient = MongoClients.create(System.getenv("DB_LOCATION"));
+        MongoDatabase db = mongoClient.getDatabase("Books");
 
+        MongoCollection<Document> collection = db.getCollection("book");
+
+        collection.insertOne(new Document()
+                .append("title", request.getParameter("title"))
+                .append("author", request.getParameter("author")));
+
+//        handleRequest(request, response);
+        response.sendRedirect("books");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,7 +51,8 @@ public class BooksServlet extends HttpServlet {
         System.out.println((2147483647-(64 + (collection.countDocuments()-1) * 66))/66 + " more entries can be added to this string builder.");
         request.setAttribute("DATA", sb);
 
-        handleRequest(request, response);
+//        handleRequest(request, response);
+        getServletContext().getRequestDispatcher("/books.jsp").forward(request, response);
     }
 
     private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
