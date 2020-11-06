@@ -13,6 +13,11 @@
     </servlet>
 
     <servlet-mapping>
+        <servlet-name>BooksServlet</servlet-name>
+        <url-pattern>/books</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
         <servlet-name>XMLServlet</servlet-name>
         <url-pattern>/xml</url-pattern>
     </servlet-mapping>
@@ -23,6 +28,6 @@
     </context-param>
 
     <error-page>
-        <location>/404.jsp</location>
+        <location>/WEB-INF/404.jsp</location>
     </error-page>
 </web-app>

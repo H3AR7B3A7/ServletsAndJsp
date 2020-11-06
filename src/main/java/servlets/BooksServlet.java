@@ -7,6 +7,7 @@ import com.mongodb.client.MongoDatabase;
 import model.Book;
 import org.bson.Document;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -52,7 +53,11 @@ public class BooksServlet extends HttpServlet {
         request.setAttribute("DATA", sb);
 
 //        handleRequest(request, response);
-        getServletContext().getRequestDispatcher("/books.jsp").forward(request, response);
+//        getServletContext().getRequestDispatcher("/books.jsp").forward(request, response);
+        RequestDispatcher dispatcher = getServletContext()
+                .getRequestDispatcher("/WEB-INF/books.jsp");
+        dispatcher.forward(request, response);
+
     }
 
     private void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
