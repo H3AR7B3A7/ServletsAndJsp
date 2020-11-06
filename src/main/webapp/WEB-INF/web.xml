@@ -13,11 +13,6 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>BooksServlet</servlet-name>
-        <url-pattern>/books</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
         <servlet-name>XMLServlet</servlet-name>
         <url-pattern>/xml</url-pattern>
     </servlet-mapping>
