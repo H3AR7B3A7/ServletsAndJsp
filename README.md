@@ -1,10 +1,8 @@
 # Servlets & JSP
-
 [Doc: JavaEE application](https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-ee-application.html)
 
 ## Deployment
 ### TomCat or GlassFish
-
 [Tomcat](http://tomcat.apache.org/) is simply an HTTP server and a Java servlet container. [Glassfish](https://javaee.github.io/glassfish/download) is a complete Java EE application server, including an EJB container and all the other features of this stack. ... By comparison, Tomcat server administration is easier than Glassfish administration, since there are fewer moving parts in Tomcat.
 
 ### Default URL
